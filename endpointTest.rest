@@ -1,0 +1,16 @@
+// LOCALHOST
+### Get all commands
+GET http://localhost:8080/commands
+
+### Create command
+POST http://localhost:8080/commands HTTP/1.1
+content-type: application/json
+
+{
+    "softwareType": "Test Type",
+    "operatingSys": "TestoperatingSys",
+    "command": "Testcommand",
+    "description": "Testdescription",
+    "authorId": "TestauthorId",
+    "otherShortCut": "TestotherShortCut"
+}
