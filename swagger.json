@@ -5,22 +5,28 @@
     "description": "This will commands for various lanaguages and Frameworks",
     "version": "1.0.0"
   },
-  "host": "newbackendlake.herokuapp.com",
+  "host": "week5projectlake.herokuapp.com",
   "basePath": "/",
+  "tags":[{
+    "name":"Command",
+    "description":"Record your command"
+
+  },{
+    "name":"User",
+    "description":"Record your user"
+  }]
+  ,
   "schemes": [
-    "https"
+    "https",
+    "http"
   ],
   "paths": {
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "parameters": [],
-        "responses": {}
-      }
-    },
     "/commands/": {
       "get": {
-        "description": "",
+        "tags": [
+          "Command"
+        ],
+        "description": "Get all the commands",
         "produces": [
           "application/json"
         ],
@@ -35,6 +41,9 @@
         }
       },
       "post": {
+        "tags": [
+          "Command"
+        ],
         "description": "",
         "parameters": [
           {
@@ -77,6 +86,9 @@
     },
     "/commands/{id}": {
       "get": {
+        "tags": [
+          "Command"
+        ],
         "description": "",
         "produces": [
           "application/json"
@@ -99,6 +111,9 @@
         }
       },
       "put": {
+        "tags": [
+          "Command"
+        ],
         "description": "",
         "parameters": [
           {
@@ -142,6 +157,9 @@
         }
       },
       "delete": {
+        "tags": [
+          "Command"
+        ],
         "description": "",
         "parameters": [
           {
@@ -160,6 +178,54 @@
           }
         }
       }
+    },
+   "/users/": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/users/{id}": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+
     }
   }
 }
