@@ -9,7 +9,7 @@ app
   .use(bodyParser.json())
   .use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
-      res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     next();
   })
   .use('/', require('./routes'));

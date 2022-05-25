@@ -7,10 +7,27 @@ POST http://localhost:8080/commands HTTP/1.1
 content-type: application/json
 
 {
-    "softwareType": "Test Type",
+    "softwareType": "Test3",
+    "operatingSys": "Test",
+    "command": "Testcommand",
+    "description": "Testdescription",
+    "authorId": "TestauthorId",
+    "otherShortCut": "TestotherShortCut"
+}
+
+### Update a command
+PUT http://localhost:8080/commands/62827a38406c271622161351 HTTP/1.1
+content-type: application/json
+
+{
+    "softwareType": "Test Type update",
     "operatingSys": "TestoperatingSys",
     "command": "Testcommand",
     "description": "Testdescription",
     "authorId": "TestauthorId",
     "otherShortCut": "TestotherShortCut"
 }
+
+### DELETE contact
+DELETE http://localhost:8080/commands/628650c7b8a66ea2f459332c
+// PR
