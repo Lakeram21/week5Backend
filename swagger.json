@@ -5,28 +5,22 @@
     "description": "This will commands for various lanaguages and Frameworks",
     "version": "1.0.0"
   },
-  "host": "week5projectlake.herokuapp.com",
+  "host": "week5projectlake.herokuapp.com/",
   "basePath": "/",
-  "tags":[{
-    "name":"Command",
-    "description":"Record your command"
-
-  },{
-    "name":"User",
-    "description":"Record your user"
-  }]
-  ,
   "schemes": [
-    "https",
-    "http"
+    "https"
   ],
   "paths": {
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
     "/commands/": {
       "get": {
-        "tags": [
-          "Command"
-        ],
-        "description": "Get all the commands",
+        "description": "",
         "produces": [
           "application/json"
         ],
@@ -41,9 +35,6 @@
         }
       },
       "post": {
-        "tags": [
-          "Command"
-        ],
         "description": "",
         "parameters": [
           {
@@ -78,6 +69,9 @@
           "201": {
             "description": "Created"
           },
+          "400": {
+            "description": "Bad Request"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -86,9 +80,6 @@
     },
     "/commands/{id}": {
       "get": {
-        "tags": [
-          "Command"
-        ],
         "description": "",
         "produces": [
           "application/json"
@@ -111,9 +102,6 @@
         }
       },
       "put": {
-        "tags": [
-          "Command"
-        ],
         "description": "",
         "parameters": [
           {
@@ -128,19 +116,22 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "softwareType": {
                   "example": "any"
                 },
-                "lastName": {
+                "operatingSys": {
                   "example": "any"
                 },
-                "email": {
+                "command": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "description": {
                   "example": "any"
                 },
-                "birthday": {
+                "authorId": {
+                  "example": "any"
+                },
+                "otherShortCut": {
                   "example": "any"
                 }
               }
@@ -151,15 +142,15 @@
           "204": {
             "description": "No Content"
           },
+          "400": {
+            "description": "Bad Request"
+          },
           "500": {
             "description": "Internal Server Error"
           }
         }
       },
       "delete": {
-        "tags": [
-          "Command"
-        ],
         "description": "",
         "parameters": [
           {
@@ -173,59 +164,14 @@
           "204": {
             "description": "No Content"
           },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-   "/users/": {
-      "get": {
-        "tags": [
-          "User"
-        ],
-        "description": "",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK"
+          "400": {
+            "description": "Bad Request"
           },
           "500": {
             "description": "Internal Server Error"
           }
         }
       }
-    },
-    "/users/{id}": {
-      "get": {
-        "tags": [
-          "User"
-        ],
-        "description": "",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-
     }
   }
 }
