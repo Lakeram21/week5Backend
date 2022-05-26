@@ -5,8 +5,11 @@
     "description": "This will commands for various lanaguages and Frameworks",
     "version": "1.0.0"
   },
-  "host": "week5projectlake.herokuapp.com/",
+  "host": "week5projectlake.herokuapp.com",
   "basePath": "/",
+  "tags":{
+
+  },
   "schemes": [
     "https"
   ],
