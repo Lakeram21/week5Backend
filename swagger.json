@@ -7,22 +7,26 @@
   },
   "host": "week5projectlake.herokuapp.com",
   "basePath": "/",
-  "tags":{
+  "tags":[
+    {
+      "name":"Commands",
+      "description": "Command Line for fast creation"
+    },
+    {
+      "name":"Users",
+      "description": "Users who have created the Commands"
+    }
 
-  },
+  ]
+
+  ,
   "schemes": [
     "https"
   ],
   "paths": {
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "parameters": [],
-        "responses": {}
-      }
-    },
     "/commands/": {
       "get": {
+        "tags":["Commands"],
         "description": "",
         "produces": [
           "application/json"
@@ -38,6 +42,7 @@
         }
       },
       "post": {
+        "tags":["Commands"],
         "description": "",
         "parameters": [
           {
@@ -83,6 +88,7 @@
     },
     "/commands/{id}": {
       "get": {
+        "tags":["Commands"],
         "description": "",
         "produces": [
           "application/json"
@@ -105,6 +111,7 @@
         }
       },
       "put": {
+        "tags":["Commands"],
         "description": "",
         "parameters": [
           {
@@ -154,6 +161,7 @@
         }
       },
       "delete": {
+        "tags":["Commands"],
         "description": "",
         "parameters": [
           {
