@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Commands API",
-    "description": "This will commands for various lanaguages and Frameworks",
+    "description": "This API will allow a user to add and reuse commandline shorts to create and interact with different software",
     "version": "1.0.0"
   },
   "host": "week5projectlake.herokuapp.com",
@@ -21,7 +21,8 @@
 
   ,
   "schemes": [
-    "https"
+    "https",
+    "http"
   ],
   "paths": {
     "/commands/": {
