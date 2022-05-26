@@ -5,7 +5,7 @@ const doc = {
     title: 'Commands API',
     description: 'This will commands for various lanaguages and Frameworks'
   },
-  host: 'week5projectlake.herokuapp.com/',
+  host: 'week5projectlake.herokuapp.com',
   schemes: ['https']
 };
 
