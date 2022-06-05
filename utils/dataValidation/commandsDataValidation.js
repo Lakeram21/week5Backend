@@ -22,7 +22,7 @@ const CreateCommandBodyValid = async (body)=>{
 const CreateUserBodyValid = async (body)=>{
         const schema = Joi.object({
                 firstName: Joi.string().min(3).max(10).required(),
-                firstName: Joi.string().min(3).max(10).required(),
+                lastName: Joi.string().min(3).max(10).required(),
                 email: Joi.string().email().required(),
                 password: Joi.string().required()
                
