@@ -1,12 +1,5 @@
 const Joi =require("joi")
 
-/***********************************
- * This is data validation for all
- * the Commands route
- * **************************** */
-
-
-
 /******************************************************
  * Validating all the data coming in when creating a new command
  * **************************************************** */
@@ -18,6 +11,21 @@ const CreateCommandBodyValid = async (body)=>{
                 description: Joi.string().min(3),
                 authorId: Joi.string().required(),
                 otherShortCut: Joi.string().min(3),
+        })
+        return schema.validate(body);
+    }
+
+
+/******************************************************
+ * Validating all the data coming in when creating a new user
+ * **************************************************** */
+const CreateUserBodyValid = async (body)=>{
+        const schema = Joi.object({
+                firstName: Joi.string().min(3).max(10).required(),
+                firstName: Joi.string().min(3).max(10).required(),
+                email: Joi.string().email().required(),
+                password: Joi.string().required()
+               
         })
         return schema.validate(body);
     }
@@ -43,4 +51,5 @@ const UpdateCommandBodyValid = async (body)=>{
     module.exports={
          CreateCommandBodyValid,
          UpdateCommandBodyValid,
+         CreateUserBodyValid,
     }
