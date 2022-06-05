@@ -23,7 +23,7 @@ try {
 /*****************************************
  * GET{id}: Getting a Specific User
  * **************************************/
-const getSpecificSoftwareType = async (req, res) => {
+const getUser = async (req, res) => {
     try {
         const email = (req.body.email);
         const result = await mongodb.getDb().db().collection('users').find({ email: email });
@@ -40,7 +40,7 @@ const getSpecificSoftwareType = async (req, res) => {
 /*****************************************
  * POST: Create a new user
  * **************************************/
-const createCommand = async (req, res) => {
+const createUser = async (req, res) => {
 try {
 
   // validate the body
@@ -147,8 +147,8 @@ try {
  * **************************************/
 module.exports = {
   getAll,
-  getSpecificSoftwareType,
-  createCommand,
+  getUser,
+  createUser,
 //   updateCommand,
 //   deleteCommand
 };
