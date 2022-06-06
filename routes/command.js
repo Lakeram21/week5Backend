@@ -1,9 +1,10 @@
 const express = require('express');
+const { requiresAuth } = require('express-openid-connect');
 const router = express.Router();
 
 const commandController = require('../controllers/command');
 
-router.get('/', commandController.getAll);
+router.get('/', requiresAuth(), commandController.getAll);
 
 router.get('/:id', commandController.getSpecificSoftwareType);
 
