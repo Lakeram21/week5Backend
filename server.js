@@ -13,10 +13,10 @@ const { auth } = require('express-openid-connect');
 const config = {
   authRequired: false,
   auth0Logout: true,
-  secret: process.env.SECRET,
-  baseURL: process.env.BASE_URL,
-  clientID: process.env.CLIENT_ID,
-  issuerBaseURL: process.env.ISSUER_BASE_URL
+  secret: 'a long, randomly-generated string stored in env',
+  baseURL: 'https://week5projectlake.herokuapp.com',
+  clientID: 'PGWD6A1aIIaxUOQcRbN5mpJ70M3P8eZw',
+  issuerBaseURL: 'https://dev-0isyug26.us.auth0.com'
 };
 
 // auth router attaches /login, /logout, and /callback routes to the baseURL
