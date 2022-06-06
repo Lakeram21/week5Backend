@@ -5,9 +5,6 @@ const mongodb = require('./db/connect');
 const port = process.env.PORT || 8080;
 const app = express();
 require('dotenv').config()
-
-
-
 const { auth } = require('express-openid-connect');
 
 const config = {
@@ -26,10 +23,6 @@ app.use(auth(config));
 app.get('/', (req, res) => {
   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 });
-
-
-
-
 
 app
   .use(bodyParser.json())
