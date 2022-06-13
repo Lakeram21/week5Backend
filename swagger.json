@@ -24,6 +24,11 @@
     "https",
     "http"
   ],
+  "securityDefinitions":{
+  "Bearer":{
+    "type": "apiKey",
+    "name": "Authorization",
+    "in": "header"}},
   "paths": {
     "/users/": {
       "get": {
@@ -83,6 +88,8 @@
     },  
     "/users/{id}": {
       "get": {
+        "security":{
+        "Bearer": []},
         "tags":["Users"],
         "description": "",
         "produces": [
@@ -109,6 +116,8 @@
     },
     "/commands/": {
       "get": {
+        "security":{
+        "Bearer": []},
         "tags":["Commands"],
         "description": "",
         "produces": [
@@ -125,6 +134,8 @@
         }
       },
       "post": {
+        "security":{
+        "Bearer": []},
         "tags":["Commands"],
         "description": "",
         "parameters": [
@@ -171,6 +182,8 @@
     },
     "/commands/{id}": {
       "get": {
+        "security":{
+        "Bearer": []},
         "tags":["Commands"],
         "description": "",
         "produces": [
@@ -194,6 +207,8 @@
         }
       },
       "put": {
+        "security":{
+        "Bearer": []},
         "tags":["Commands"],
         "description": "",
         "parameters": [
@@ -244,6 +259,8 @@
         }
       },
       "delete": {
+        "security":{
+        "Bearer": []},
         "tags":["Commands"],
         "description": "",
         "parameters": [
