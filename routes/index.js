@@ -7,3 +7,4 @@ router.use('/commands', requiresAuth() , require('./command'));
 router.use('/users', requiresAuth(), require('./users'));
 
 module.exports = router;
+   
